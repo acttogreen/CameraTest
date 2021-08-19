@@ -34,19 +34,20 @@ public class CameraManager : MonoBehaviour
         if (!backCamera) return;
         backCamera.Play();
         background.texture = backCamera;
-        background.color = Color.white;
         camAvailable = true;
     }
+    private float scaleY;
+    private int orient;
     private void Update()
     {
         if (!camAvailable) return;
         float ratio = (float)backCamera.width / (float)backCamera.height;
         fitter.aspectRatio = ratio;
 
-        float scaleY = backCamera.videoVerticallyMirrored ? -1f : 1f;
+        scaleY = backCamera.videoVerticallyMirrored ? -1f : 1f;
         background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
-        int orient = -backCamera.videoRotationAngle;
+        orient = -backCamera.videoRotationAngle;
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 
@@ -61,11 +62,13 @@ public class CameraManager : MonoBehaviour
             photo.SetPixels(backCamera.GetPixels());
             photo.Apply();
 
-            //Encode to a PNG
-            byte[] bytes = photo.EncodeToPNG();
-            //Write out the PNG. Of course you have to substitute your_path for something sensible
-            File.WriteAllBytes(Application.persistentDataPath + "/Photo/photo_" + DateTime.Now + ".png", bytes);
-            Debug.Log("Image Captured");
+            string path = Application.persistentDataPath + " /Image/";
+            byte[] bytes = photo.EncodeToPNG();   //Encode to a PNG
+            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+            yield return new WaitForSeconds(0.5f);
+
+            File.WriteAllBytes(path + DateTime.Now.ToString("yyyyMMdd_hhmmss") + ".png", bytes);
+            Debug.Log("Image Captured : " + DateTime.Now + ".png");
         }
     }
 }

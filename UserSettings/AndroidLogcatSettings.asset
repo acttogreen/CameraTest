@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "15e69beb",
         "name": "com.rbs.camera",
-        "processId": 12302,
+        "processId": 19992,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,43 +17,43 @@
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
-            "processId": 3777,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.android.settings",
-            "processId": 7090,
+            "processId": 11976,
             "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
-            "processId": 6422,
+            "processId": 13541,
             "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
-            "processId": 7335,
+            "processId": 15323,
             "exited": true
         },
         {
             "deviceId": "15e69beb",
-            "name": "com.android.settings",
-            "processId": 10106,
+            "name": "com.rbs.camera",
+            "processId": 16136,
+            "exited": true
+        },
+        {
+            "deviceId": "15e69beb",
+            "name": "com.rbs.camera",
+            "processId": 17789,
+            "exited": true
+        },
+        {
+            "deviceId": "15e69beb",
+            "name": "com.rbs.camera",
+            "processId": 18762,
             "exited": false
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
-            "processId": 11209,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 12302,
+            "processId": 19992,
             "exited": false
         }
     ],
