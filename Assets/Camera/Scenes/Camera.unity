@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 1978794605}
-  result: {fileID: 0}
+  result: {fileID: 1154042091}
   fitter: {fileID: 1978794604}
   buttons: {fileID: 1283412186}
   resultBtn: {fileID: 1688336414}

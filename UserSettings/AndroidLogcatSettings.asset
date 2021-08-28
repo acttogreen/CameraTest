@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "15e69beb",
         "name": "com.rbs.camera",
-        "processId": 1286,
+        "processId": 9270,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,79 +11,49 @@
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
-            "processId": 19992,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 21234,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 6794,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.facebook.katana",
-            "processId": 9257,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 10983,
-            "exited": true
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.miui.gallery",
-            "processId": 12326,
-            "exited": false
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 15114,
-            "exited": false
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
-            "processId": 20815,
-            "exited": false
-        },
-        {
-            "deviceId": "15e69beb",
-            "name": "com.rbs.camera",
             "processId": 24406,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
             "processId": 26760,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
             "processId": 29304,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
             "processId": 30986,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
             "processId": 1286,
+            "exited": true
+        },
+        {
+            "deviceId": "15e69beb",
+            "name": "com.miui.home",
+            "processId": 2681,
+            "exited": false
+        },
+        {
+            "deviceId": "15e69beb",
+            "name": "com.rbs.camera",
+            "processId": 6979,
+            "exited": false
+        },
+        {
+            "deviceId": "15e69beb",
+            "name": "com.rbs.camera",
+            "processId": 9270,
             "exited": false
         }
     ],
