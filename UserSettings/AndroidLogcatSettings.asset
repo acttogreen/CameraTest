@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "15e69beb",
+    "m_SelectedDeviceId": "b7a3cd0d",
     "m_SelectedPackage": {
-        "deviceId": "15e69beb",
+        "deviceId": "b7a3cd0d",
         "name": "com.rbs.camera",
-        "processId": 9270,
+        "processId": 17028,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "15e69beb",
             "name": "com.rbs.camera",
             "processId": 9270,
+            "exited": false
+        },
+        {
+            "deviceId": "b7a3cd0d",
+            "name": "com.rbs.camera",
+            "processId": 17028,
             "exited": false
         }
     ],
