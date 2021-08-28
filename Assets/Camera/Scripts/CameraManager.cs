@@ -98,6 +98,13 @@ public class CameraManager : MonoBehaviour
            if (path != null)
            {
                ToggleResultPanel(true);
+               Texture2D tex = null;
+               byte[] filedata = File.ReadAllBytes(path);
+               tex = new Texture2D(2, 2);
+               tex.LoadImage(filedata);
+               result.texture = tex;
+               
+               /*
                // Create Texture from selected image
                Texture2D texture = NativeGallery.LoadImageAtPath(path, maxSize);
                if (texture == null)
@@ -107,6 +114,7 @@ public class CameraManager : MonoBehaviour
                }
                texture.Apply();
                result.texture = texture;
+               */
            }
        });
 
