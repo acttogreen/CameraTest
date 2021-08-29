@@ -18,14 +18,12 @@ public class CameraManager : MonoBehaviour
     private Color transparent = new Color(1, 1, 1, 0f);
 
     //UI
-    public GameObject buttons, resultBtn, resultPanel;
+    public GameObject buttons, resultBtn;
+    public CanvasGroup resultGroup;
 
     private void Start()
     {
         using (AndroidJavaClass ajc = new AndroidJavaClass("com.yasirkula.unity.NativeGalleryMediaPickerFragment")) ajc.SetStatic<bool>("preferGetContent", true);
-#if PLATFORM_ANDROID
-        if (!Permission.HasUserAuthorizedPermission(Permission.Camera)) Permission.RequestUserPermission(Permission.Camera);
-#endif
         defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
         if (devices.Length == 0)
@@ -44,7 +42,6 @@ public class CameraManager : MonoBehaviour
         backCamera.Play();
         background.texture = backCamera;
         camAvailable = true;
-        result.color = transparent;
         resultBtn.SetActive(false);
     }
 
@@ -88,9 +85,9 @@ public class CameraManager : MonoBehaviour
     public void ShowPicture()
     {
         if (NativeGallery.IsMediaPickerBusy()) return;
-        PickImage(512);
+        PickImage();
     }
-    private void PickImage(int maxSize)
+    private void PickImage()
     {
         NativeGallery.Permission permission = NativeGallery.GetImageFromGallery((path) =>
        {
@@ -98,28 +95,16 @@ public class CameraManager : MonoBehaviour
            if (path != null)
            {
                ToggleResultPanel(true);
-               Texture2D tex = null;
+               Texture2D tex = new Texture2D(Screen.width, Screen.height);
                byte[] filedata = File.ReadAllBytes(path);
-               tex = new Texture2D(2, 2);
                tex.LoadImage(filedata);
                result.texture = tex;
-               
-               /*
-               // Create Texture from selected image
-               Texture2D texture = NativeGallery.LoadImageAtPath(path, maxSize);
-               if (texture == null)
-               {
-                   Debug.Log("Couldn't load texture from " + path);
-                   return;
-               }
-               texture.Apply();
-               result.texture = texture;
-               */
+               ToggleResultPanel(true);
            }
        });
 
         Debug.Log("Permission result: " + permission);
     }
     public void CloseResultPanel() => ToggleResultPanel(false);
-    public void ToggleResultPanel(bool value) => resultPanel.SetActive(value);
+    public void ToggleResultPanel(bool value) => resultGroup.alpha = value ? 1 : 0f;
 }
